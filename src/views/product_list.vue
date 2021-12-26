@@ -13,19 +13,19 @@
           <div id="#v-model-multiple-checkboxes">
             <input type="checkbox" v-model="checkedIds" :value="product.Id" class="delete-checkbox" />
           <div class="center">
-            <p>{{ product.SKU }}</p>
-            <p>{{ product.productName }}</p>
-            <p>{{ product.price }} $</p>
-            <div v-if="product.productType == 'Book'">
-              Weight :{{ product.dimension1 }}
-            </div>
-            <div v-else-if="product.productType == 'DVD'">
-              Size :{{ product.dimension1 }}
-            </div>
-            <div v-else-if="product.productType == 'Furniture'">
+            <p id="SKU">{{ product.SKU }}</p>
+            <p id="Name">{{ product.productName }}</p>
+            <p id="Price">{{ product.price }} $</p>
+            <p v-if="product.productType == 'Book'" id="Weight">
+              Weight :{{ product.dimension1 }} Kg
+            </p>
+            <p v-else-if="product.productType == 'DVD'" id="Size">
+              Size :{{ product.dimension1 }} MB
+            </p>
+            <p v-else-if="product.productType == 'Furniture'" id="Dimensions">
               Dimensions :{{ product.dimension1 }} x {{ product.dimension2 }} x
               {{ product.dimension3 }}
-            </div>
+            </p>
           </div>
         </div>
       </div>
