@@ -12,13 +12,12 @@
       <div v-for="product in products" :key="product.id" v-bind:id="product.Id">
         <div class="grid-item">
           <div id="#v-model-multiple-checkboxes">
-            <input type="checkbox" v-model="checkedIds" :value="product.Id" />
-            <!-- <input type="checkbox" id="mike" value="Mike" v-model="checkedIds"> -->
+            <input type="checkbox" v-model="checkedIds" :value="product.Id" class="delete-checkbox" />
           </div>
           <div class="center">
-            <div>{{ product.SKU }}</div>
-            <div>{{ product.productName }}</div>
-            <div>{{ product.price }} $</div>
+            <p>{{ product.SKU }}</p>
+            <p>{{ product.productName }}</p>
+            <p>{{ product.price }} $</p>
             <div v-if="product.productType == 'Book'">
               Weight :{{ product.dimension1 }}
             </div>
@@ -106,5 +105,9 @@ export default {
   background-color: rgb(145, 143, 143);
   height: 100%;
   width: 100%;
+}
+p {
+  font-size: 1.2rem;
+  margin: 0;
 }
 </style>
