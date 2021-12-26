@@ -169,9 +169,11 @@ export default {
         axios
           .post("https://juniottestapi.000webhostapp.com/product", formData)
           .then((res) => {
+            console.log(res);
             this.$router.push("/");
           });
       } else {
+        console.log(this.errors);
       }
     },
     isNumber(value) {

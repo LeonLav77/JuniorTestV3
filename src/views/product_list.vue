@@ -71,6 +71,7 @@ export default {
           .then((res) => {
             this.toDelete = res.data;
             if (this.toDelete == "empty") {
+              console.log("products not found");
             } else {
               for (let i = 0; i < this.toDelete.length; i++) {
                 let id = this.toDelete[i];
@@ -83,6 +84,7 @@ export default {
             this.checkedIds = [];
           });
       } else {
+        console.log("no products selected");
       }
     },
     add_products() {
