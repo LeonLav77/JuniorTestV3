@@ -170,6 +170,7 @@ export default {
           .post("https://juniottestapi.000webhostapp.com/product", formData)
           .then((res) => {
             console.log(res);
+            this.$router.push("/products");
             this.$router.push("/");
           });
       } else {

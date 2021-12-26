@@ -9,11 +9,9 @@
     </div>
     <hr />
     <div id="grid">
-      <div v-for="product in products" :key="product.id" v-bind:id="product.Id">
-        <div class="grid-item">
+      <div v-for="product in products" :key="product.id" v-bind:id="product.Id" class="grid-item">
           <div id="#v-model-multiple-checkboxes">
             <input type="checkbox" v-model="checkedIds" :value="product.Id" class="delete-checkbox" />
-          </div>
           <div class="center">
             <p>{{ product.SKU }}</p>
             <p>{{ product.productName }}</p>
