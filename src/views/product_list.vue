@@ -48,7 +48,8 @@ export default {
   }),
   mounted() {
     axios.get("https://juniottestapi.000webhostapp.com/product").then((res) => {
-      if (res.data.length > 0) {
+      console.log(res.data);
+      if (res.data != "0 results") {
         let products = JSON.parse(res.data);
         this.products = products;
       } else {
