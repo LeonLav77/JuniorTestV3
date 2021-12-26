@@ -55,7 +55,7 @@
         <div>
           <input
             type="text"
-            id="lenght"
+            id="length"
             v-model="dimension3"
             name="dimension3"
             placeholder="lenght"
@@ -91,7 +91,7 @@ export default {
     changeFrom() {
       if (this.selected === "Furniture") {
         this.measure = "dimensions";
-        this.measureUnit = "length";
+        this.measureUnit = "height";
       } else if (this.selected === "Book") {
         this.measure = "weight";
         this.measureUnit = "weight";
