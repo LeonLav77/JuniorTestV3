@@ -43,7 +43,7 @@
             headerTitle: 'Product List'
 		}),
 		mounted() {
-			axios.get('http://juniottestapi.000webhostapp.com/product').then((res) => {
+			axios.get('https://juniottestapi.000webhostapp.com/product').then((res) => {
 				// this.users = res.data
                 let products = JSON.parse(res.data);
                 console.log(products);
@@ -54,7 +54,7 @@
 		},
         methods: {
             massDelete() {
-                axios.delete('http://juniottestapi.000webhostapp.com/product?checkedIds=' + this.checkedIds).then((res) => {
+                axios.delete('https://juniottestapi.000webhostapp.com/product?checkedIds=' + this.checkedIds).then((res) => {
                     console.log(res.data);
                     this.toDelete = res.data;
                     if(this.toDelete == "empty") {
