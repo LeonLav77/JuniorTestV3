@@ -134,7 +134,7 @@
                     formData.append('dimension1', this.dimension1);
                     formData.append('dimension2', this.dimension2);
                     formData.append('dimension3', this.dimension3);
-                    axios.post('http://localhost/product', formData)
+                    axios.post('http://juniottestapi.000webhostapp.com/product', formData)
                     .then((res) => {
                         console.log(res);
                         this.$router.push('/');
