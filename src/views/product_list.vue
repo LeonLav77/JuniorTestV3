@@ -65,8 +65,7 @@ export default {
       if (this.checkedIds.length > 0) {
         axios
           .get(
-            "https://juniottestapi.000webhostapp.com/product?checkedIds=" +
-              this.checkedIds
+            "https://juniottestapi.000webhostapp.com/product"
           )
           .then((res) => {
             this.toDelete = res.data;
