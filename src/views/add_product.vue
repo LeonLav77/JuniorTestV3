@@ -58,7 +58,7 @@
             id="length"
             v-model="dimension3"
             name="dimension3"
-            placeholder="lenght"
+            placeholder="length"
           />
         </div>
       </div>
