@@ -63,9 +63,6 @@
         </div>
       </div>
     </form>
-    <div class="delete-checkbox">
-      NameTest001
-    </div>
   </div>
 </template>
 
