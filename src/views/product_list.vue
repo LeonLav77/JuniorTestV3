@@ -54,7 +54,8 @@
 		},
         methods: {
             massDelete() {
-                axios.delete('https://juniottestapi.000webhostapp.com/product?checkedIds=' + this.checkedIds).then((res) => {
+                if(this.checkedIds.length > 0) {
+                axios.get('https://juniottestapi.000webhostapp.com/product?checkedIds=' + this.checkedIds).then((res) => {
                     console.log(res.data);
                     this.toDelete = res.data;
                     if(this.toDelete == "empty") {
@@ -68,6 +69,9 @@
                     }
                     this.checkedIds = [];
                 })
+                }else{
+                    console.log('No products selected');
+                }
             },
             add_products(){
                 this.$router.push('/add-product');
