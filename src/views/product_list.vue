@@ -70,7 +70,7 @@
                 })
             },
             add_products(){
-                this.$router.push('/add_product');
+                this.$router.push('/add-product');
             }
         }
 	}
